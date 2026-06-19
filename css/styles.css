@@ -775,40 +775,10 @@ a:hover {
   border-bottom: 1px solid var(--color-border);
 }
 
-.footer-logos {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.footer-logo-poddeal {
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  background: linear-gradient(90deg, #00cfff 0%, #4d7fff 55%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.footer-logo-divider {
-  display: block;
-  width: 1px;
-  height: 1rem;
-  background: var(--color-border);
-}
-
-.footer-logo-gtmk {
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.06em;
-  color: var(--color-text-muted);
-}
-
-.footer-tag {
-  margin: 0.4rem 0 0;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
+.footer-gtmk-logo {
+  height: 2.5rem;
+  width: auto;
+  opacity: 0.9;
 }
 
 .footer-address {

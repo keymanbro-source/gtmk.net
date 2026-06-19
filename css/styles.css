@@ -872,3 +872,195 @@ a:hover {
     display: block !important;
   }
 }
+
+/* ─── Scroll animations ──────────────────────────────────────── */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate="slide-right"] {
+  transform: translateX(32px);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Hero orbs ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(72px);
+  will-change: transform;
+}
+
+.hero-orb--1 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(61, 156, 240, 0.2) 0%, transparent 70%);
+  top: -120px;
+  right: 5%;
+  animation: orbFloat 9s ease-in-out infinite alternate;
+}
+
+.hero-orb--2 {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.18) 0%, transparent 70%);
+  bottom: -60px;
+  left: 0%;
+  animation: orbFloat 11s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(24px, -36px) scale(1.07); }
+}
+
+/* ─── Hero stats ─────────────────────────────────────────────── */
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-stat-value {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(90deg, #5eb0f7 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-stat-unit {
+  font-size: 1.1rem;
+}
+
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ─── Section title underline decoration ─────────────────────── */
+.section-title {
+  padding-bottom: 0.85rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  margin-top: 0.6rem;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-accent), #a78bfa);
+}
+
+.cta .section-title::after {
+  margin-inline: auto;
+}
+
+/* ─── Ripple button effect ───────────────────────────────────── */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleExpand 0.55s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes rippleExpand {
+  to {
+    transform: translate(-50%, -50%) scale(28);
+    opacity: 0;
+  }
+}
+
+/* ─── Feature card colored glow on hover ─────────────────────── */
+.feature-card--user:hover {
+  box-shadow: var(--shadow-card), 0 0 24px rgba(78, 205, 196, 0.14);
+}
+
+.feature-card--seller:hover {
+  box-shadow: var(--shadow-card), 0 0 24px rgba(125, 216, 125, 0.14);
+}
+
+.feature-card--ai:hover {
+  box-shadow: var(--shadow-card), 0 0 24px rgba(167, 139, 250, 0.18);
+}
+
+/* ─── Biz pillar hover ───────────────────────────────────────── */
+.biz-pillars li {
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.biz-pillars li:hover {
+  border-color: rgba(61, 156, 240, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ─── Flow step hover ────────────────────────────────────────── */
+.flow-step {
+  transition: background var(--transition);
+  border-radius: var(--radius);
+  padding-inline: 0.5rem;
+  margin-inline: -0.5rem;
+}
+
+.flow-step:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ─── Pain card hover ────────────────────────────────────────── */
+.pain-card {
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.pain-card:hover {
+  border-left-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ─── Mobile: hero stats wrap ────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero-stats {
+    gap: 1.25rem;
+  }
+  .hero-stat-value {
+    font-size: 1.5rem;
+  }
+}

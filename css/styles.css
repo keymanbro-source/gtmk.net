@@ -750,11 +750,12 @@ a:hover {
 
 .cta-oneline {
   margin: 0 auto 1.5rem;
-  max-width: 40rem;
+  max-width: none;
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--color-text-muted);
   font-style: italic;
+  white-space: nowrap;
 }
 
 /* Footer */
@@ -777,7 +778,7 @@ a:hover {
 }
 
 .footer-gtmk-logo {
-  height: 5rem;
+  height: 10rem;
   width: auto;
   display: block;
 }

@@ -760,36 +760,46 @@ a:hover {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   background: var(--color-surface);
 }
 
 .footer-inner {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .footer-brand {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
 }
 
 .footer-gtmk-logo {
-  height: 7.5rem;
+  height: 5rem;
   width: auto;
+  display: block;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
 }
 
 .footer-address {
   font-style: normal;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.75;
+  text-align: right;
 }
 
 .footer-address p {
-  margin: 0 0 0.35rem;
+  margin: 0;
 }
 
 .footer-address strong {
@@ -799,10 +809,25 @@ a:hover {
 
 .footer-copy {
   margin: 0;
-  padding-top: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
-  opacity: 0.85;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-info {
+    align-items: flex-start;
+  }
+
+  .footer-address {
+    text-align: left;
+  }
 }
 
 /* Mobile nav */

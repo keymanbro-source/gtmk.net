@@ -20,7 +20,21 @@
     <header class="site-header">
       <div class="header-inner">
         <a href="#" class="logo" aria-label="Poddeal 팟딜 홈">
-          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pd-grad-h" x1="2" y1="2" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00cfff"/>
+                  <stop offset="55%" stop-color="#4d7fff"/>
+                  <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+              <circle cx="18" cy="18" r="14.5" stroke="url(#pd-grad-h)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="77 15" stroke-dashoffset="-4"/>
+              <circle cx="18" cy="18" r="9" stroke="url(#pd-grad-h)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="41 17" stroke-dashoffset="8"/>
+              <circle cx="18" cy="3.5" r="2" fill="#00cfff"/>
+              <circle cx="30.5" cy="24.5" r="2" fill="#8b5cf6"/>
+            </svg>
+          </span>
           <span class="logo-text">
             <span class="logo-en">poddeal</span>
             <span class="logo-ko">팟딜</span>
@@ -441,10 +455,12 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <span class="footer-logo">Poddeal 팟딜</span>
-          <p class="footer-tag">
-            (주)지티엠케이 · GTMK
-          </p>
+          <div class="footer-logos">
+            <span class="footer-logo-poddeal">poddeal</span>
+            <span class="footer-logo-divider" aria-hidden="true"></span>
+            <span class="footer-logo-gtmk">GTMK</span>
+          </div>
+          <p class="footer-tag">(주)지티엠케이 · 주식회사 지티엠케이</p>
         </div>
         <address class="footer-address">
           <p><strong>(주)지티엠케이 (GTMK)</strong></p>
